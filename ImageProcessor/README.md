@@ -1,28 +1,5 @@
 
-Image Processing (Part 3)
 
-Sevinch Noori
-Aishu Vinod
-
-Image Citation
-
-The ppm file we have submitted is a 2 by 2 image with pixels that we made by ourselves.
-
-Jpeg image
-https://unsplash.com/assets/api/applications/devs/google-6a4028f6f5ea3e6ef1da633c850bdcc79c8ecaa714
-c67b84c8ce205e88969ca1.jpg
-
-Bmp image
-https://www.smwcentral.net/?p=files&u=3309&newwindow=true
-
-Png image
-https://www.pngitem.com/middle/iiwRJTT_100-by-100-pixel-hd-png-download/
-
-
-
-GUI
-
-UPDATES:
 
 IPixel & Pixel (Model Package)
 - In our Pixel class which implements IPixel, we added a public getter method, getIntensity( ); which
@@ -101,51 +78,6 @@ order to pick where the image is being saved.
 invalid input.
 - Some additional features provided by our program is the ability to resize the window,
 scroll an image, and exit when the user hits X.
-
-
-CHANGES
-- We originally had our saving functionality in the text controller. We moved this functionality
-into our ImageEditor class and reimplemented it into the text controller and implemented it in the
-GUI controller.
-
-- We made this change since both controllers needed to have saving functionality, it
-made sense to centralize it in the shared model for combined use.
-- Also in our ImageEditor class we added the same String toPPM() method as is in our TextView class.
- This method is used in our model class to support the saving functionality in regards to PPM
- formatted files. This method was removed from the TextView class since the saving functionality
- was removed from the text controller and is thus no longer necessary.
-- Other than that, we did not change our old code to incorporate the new updated functionality.
-
-
-
- NOTE ** our PPM files take a little longer to load.
-
-
-
-
-
-
---------------------------------------------------------------------------------------------------
-
-
-Assignment 5 Readme
-
-- Our model, ImageEditor, loads in an image that can be in ppm, jpg, jpeg, and png format because
-our model is null until an image is provided.
-- Our image consists of pixels which are represented as a 2D array because the image consists of a
-[width] and [height].
-- Within an image, each pixel contains x and y which represents its coordinates in the 2D array and
-also its red, green, and blue components.
-- Our Pixel class makes up our 2D array to create the image. When the image is loaded, it is
- temporarily stored in a Hashmap that allows the 2D array (the image) to be represented as a name,
- represented by a String, that is chosen by the users.
-- The view displays the image in terms of the pixels’ specific location and its color values.
-- It also creates a message that is displayed to the user.
-- The controller complements the view by producing the image and messages that depend on the
-successfulness of the function inputted by the user.
-- The controller delegates the methods created in the model to alter the images or make new images
-  according to user input and transmits this information to view. The controller then produces the
-  view to the user.
 
 Note
 * most private and protected methods, fields, and classes are not exposed in this document
